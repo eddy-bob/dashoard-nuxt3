@@ -3,7 +3,8 @@ import {} from "#imports";
 import { useRoute } from "vue-router";
 
 const route = useRoute();
-
+// inject global state
+const displaySideNav = inject<{ value: boolean }>("displaySideNav");
 // define meta
 definePageMeta({
   title: "Page One",
@@ -11,7 +12,13 @@ definePageMeta({
 });
 </script>
 <template>
-  <div>router 1</div>
+  <div @click="displaySideNav = false" class="min-w-screen min-h-screen">
+    <div class="">
+      <div class="flex justify-center">
+        <p>router 2</p>
+      </div>
+    </div>
+  </div>
 </template>
 
 <style></style>

@@ -4,8 +4,9 @@ import { useRoute } from "vue-router";
 const route = useRoute();
 // define emit
 const emit = defineEmits<{ e: "closeNav" }>();
+// inject global state
 const displaySideNav = inject<{ value: boolean }>("displaySideNav");
-// define meta
+
 // define meta
 definePageMeta({
   title: "Home Page",
@@ -13,7 +14,6 @@ definePageMeta({
 });
 </script>
 <template>
- 
   <div class="w-full flex justify-center" @click="displaySideNav = false">
     <div class="space-y-16">
       <div class="border-b flex sm:justify-end justify-center">

@@ -11,7 +11,7 @@ provide<{ value: boolean }>("displaySideNav", displaySideNav);
 const route = useRoute();
 console.log(route.meta.description);
 useHead({
-  titleTemplate: (titleChunk) => {
+  titleTemplate: () => {
     return route.meta.title ? `${route.meta.title}` : "";
   },
   meta: [
@@ -48,8 +48,6 @@ useHead({
 </template>
 
 <style>
-/* @import url("@/assets/css/tailwind.css"); */
-
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css");
 
 select {
