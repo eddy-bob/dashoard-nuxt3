@@ -9,10 +9,10 @@ export default defineNuxtConfig({
               strict: true
        },
 
-target:”static”,
-generate: {
-    fallback: true
-  },
+       target: "static",
+       generate: {
+              fallback: true
+       },
 
        // Global page headers: https://go.nuxtjs.dev/config-head
        head: {
